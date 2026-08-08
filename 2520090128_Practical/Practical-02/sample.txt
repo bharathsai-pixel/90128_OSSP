@@ -1,0 +1,4 @@
+Operating Systems Practical 02
+System Call Tracing using strace
+Linux Kernel Interaction
+
