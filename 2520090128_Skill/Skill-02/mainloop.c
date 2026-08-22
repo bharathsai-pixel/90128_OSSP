@@ -3,7 +3,8 @@
 #include <termios.h>
 #include <string.h>
 
-int main() {
+int main()
+{
     char buffer[100];
     int index = 0;
     char ch;
@@ -18,27 +19,31 @@ int main() {
 
     printf("myshell> ");
 
-    while (1) {
+    while (1)
+    {
         ch = getchar();
 
-        if (ch == '\n') {
+        if (ch == '\n')
+        {
             buffer[index] = '\0';
 
             printf("\nYou entered: %s\n", buffer);
             break;
         }
-
-        else if (ch == 127) {
-            if (index > 0) {
+        else if (ch == 127)
+        {
+            if (index > 0)
+            {
                 index--;
                 printf("\b \b");
                 fflush(stdout);
             }
         }
-
-        else if (index < 99) {
+        else if (index < 99)
+        {
             buffer[index] = ch;
             index++;
+
             printf("%c", ch);
             fflush(stdout);
         }
